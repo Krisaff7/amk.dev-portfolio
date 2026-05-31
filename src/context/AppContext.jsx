@@ -1,9 +1,7 @@
 import { createContext, useContext, useState, useEffect } from 'react'
 
-// toutes les traductions FR / EN
 const translations = {
   fr: {
-    // navbar
     'nav.home':        'Accueil',
     'nav.about':       'À propos',
     'nav.timeline':    'Parcours',
@@ -11,8 +9,6 @@ const translations = {
     'nav.projects':    'Projets',
     'nav.stats':       'Stats',
     'nav.contact':     'Contact',
-
-    // hero
     'hero.badge':      'PORTFOLIO · 2025',
     'hero.phrase1':    'Développeur Web Fullstack Junior',
     'hero.phrase2':    'Développeur Mobile React Native',
@@ -20,8 +16,6 @@ const translations = {
     'hero.accroche':   'Je transforme des idées en expériences numériques — du frontend au backend.',
     'hero.cta1':       'Voir mes projets',
     'hero.cta2':       'Me contacter',
-
-    // about
     'about.badge':     'ABOUT',
     'about.title1':    'À propos de ',
     'about.title2':    'moi',
@@ -30,8 +24,6 @@ const translations = {
     'about.badge1':    "Étudiant à l'IFRI — UAC, Bénin",
     'about.badge2':    'Disponible pour projets freelance',
     'about.cv':        'Télécharger mon CV',
-
-    // timeline
     'timeline.badge':       'PARCOURS',
     'timeline.title1':      'Mon ',
     'timeline.title2':      'parcours',
@@ -43,48 +35,35 @@ const translations = {
     'timeline.l2.desc':     "Bases de données Oracle/SQL, structures de données avancées (C), architecture réseau, méthodes Agile, développement web & mobile.",
     'timeline.goal.title':  'Objectif',
     'timeline.goal.desc':   'Licence 3 (L3) puis Master DevOps & Cloud.',
-
-    // skills
     'skills.badge':       'STACK',
     'skills.title1':      'Mes ',
     'skills.title2':      'compétences',
     'skills.languages':   'Langages',
     'skills.frameworks':  'Frameworks & Librairies',
-
-    // projects
-    'projects.badge':               'WORK',
-    'projects.title1':              'Mes ',
-    'projects.title2':              'projets',
-    'projects.code':                'Code',
-    'projects.view':                'Voir',
-    'projects.status.done':         'Terminé',
-    'projects.status.inprogress':   'En cours',
-    'projects.taskflow.desc':       'Application mobile de gestion de tâches avec synchronisation hors-ligne et notifications.',
-    'projects.engine.desc':         'Plateforme web permettant aux étudiants de créer leur portfolio en quelques clics.',
-    'projects.campus.desc':         'API REST pour la gestion des emplois du temps universitaires avec authentification JWT.',
-
-    // stats
-    'stats.badge':    'CHIFFRES',
-    'stats.title1':   'En ',
-    'stats.title2':   'bref',
-    'stats.projects': 'Projets réalisés',
-    'stats.techs':    'Technologies',
-    'stats.years':    'Années de formation',
-    'stats.available':'Disponible freelance',
-
-    // contact
+    'projects.badge':              'WORK',
+    'projects.title1':             'Mes ',
+    'projects.title2':             'projets',
+    'projects.code':               'Code',
+    'projects.view':               'Voir',
+    'projects.portfolio.desc':     'Portfolio personnel développé from scratch avec React.js et Tailwind CSS. Mode sombre/clair, traduction FR/EN, animations et design responsive.',
+    'projects.workguard.desc':     'Application mobile de suivi de temps professionnel avec gestion de quota annuel de 964h. Chronométrage précis et historique local 100% offline.',
+    'projects.writapp.desc':       'Application mobile de prise de notes moderne avec recherche instantanée et stockage local sécurisé. Fonctionne entièrement hors-ligne.',
+    'stats.badge':     'CHIFFRES',
+    'stats.title1':    'En ',
+    'stats.title2':    'bref',
+    'stats.projects':  'Projets réalisés',
+    'stats.techs':     'Technologies',
+    'stats.years':     'Années de formation',
+    'stats.available': 'Disponible freelance',
     'contact.badge':    'CONTACT',
     'contact.title1':   'Contacte-',
     'contact.title2':   'moi',
     'contact.subtitle': "Tu as un projet, une question ou une opportunité ? N'hésite pas.",
-
-    // footer
     'footer.rights': '© 2025 AFFOKPON Mahouton Kris — Tous droits réservés',
-   
+
   },
 
   en: {
-    // navbar
     'nav.home':        'Home',
     'nav.about':       'About',
     'nav.timeline':    'Journey',
@@ -92,8 +71,6 @@ const translations = {
     'nav.projects':    'Projects',
     'nav.stats':       'Stats',
     'nav.contact':     'Contact',
-
-    // hero
     'hero.badge':      'PORTFOLIO · 2025',
     'hero.phrase1':    'Junior Fullstack Web Developer',
     'hero.phrase2':    'Mobile React Native Developer',
@@ -101,8 +78,6 @@ const translations = {
     'hero.accroche':   'I turn ideas into digital experiences — from frontend to backend.',
     'hero.cta1':       'View my projects',
     'hero.cta2':       'Contact me',
-
-    // about
     'about.badge':     'ABOUT',
     'about.title1':    'About ',
     'about.title2':    'me',
@@ -111,8 +86,6 @@ const translations = {
     'about.badge1':    'Student at IFRI — UAC, Benin',
     'about.badge2':    'Available for freelance projects',
     'about.cv':        'Download my CV',
-
-    // timeline
     'timeline.badge':       'JOURNEY',
     'timeline.title1':      'My ',
     'timeline.title2':      'journey',
@@ -124,42 +97,30 @@ const translations = {
     'timeline.l2.desc':     'Oracle/SQL databases, advanced data structures (C), network architecture, Agile methods, web & mobile development.',
     'timeline.goal.title':  'Goal',
     'timeline.goal.desc':   'Bachelor Year 3 (L3) then Master in DevOps & Cloud.',
-
-    // skills
     'skills.badge':       'STACK',
     'skills.title1':      'My ',
     'skills.title2':      'skills',
     'skills.languages':   'Languages',
     'skills.frameworks':  'Frameworks & Libraries',
-
-    // projects
-    'projects.badge':               'WORK',
-    'projects.title1':              'My ',
-    'projects.title2':              'projects',
-    'projects.code':                'Code',
-    'projects.view':                'View',
-    'projects.status.done':         'Completed',
-    'projects.status.inprogress':   'In progress',
-    'projects.taskflow.desc':       'Mobile task management app with offline sync and notifications.',
-    'projects.engine.desc':         'Web platform allowing students to create their portfolio in a few clicks.',
-    'projects.campus.desc':         'REST API for university timetable management with JWT authentication.',
-
-    // stats
-    'stats.badge':    'NUMBERS',
-    'stats.title1':   'In ',
-    'stats.title2':   'brief',
-    'stats.projects': 'Projects completed',
-    'stats.techs':    'Technologies',
-    'stats.years':    'Years of training',
-    'stats.available':'Available freelance',
-
-    // contact
+    'projects.badge':              'WORK',
+    'projects.title1':             'My ',
+    'projects.title2':             'projects',
+    'projects.code':               'Code',
+    'projects.view':               'View',
+    'projects.portfolio.desc':     'Personal portfolio built from scratch with React.js and Tailwind CSS. Dark/light mode, FR/EN translation, animations and responsive design.',
+    'projects.workguard.desc':     'Mobile app for professional time tracking with annual quota management (964h). Precise timing and 100% offline local history.',
+    'projects.writapp.desc':       'Modern mobile note-taking app with instant search and secure local storage. Works entirely offline.',
+    'stats.badge':     'NUMBERS',
+    'stats.title1':    'In ',
+    'stats.title2':    'brief',
+    'stats.projects':  'Projects completed',
+    'stats.techs':     'Technologies',
+    'stats.years':     'Years of training',
+    'stats.available': 'Available freelance',
     'contact.badge':    'CONTACT',
     'contact.title1':   'Contact ',
     'contact.title2':   'me',
     'contact.subtitle': 'Got a project, a question or an opportunity? Feel free to reach out.',
-
-    // footer
     'footer.rights': '© 2025 AFFOKPON Mahouton Kris — All rights reserved',
   },
 }
@@ -168,31 +129,33 @@ const AppContext = createContext()
 
 export function AppProvider({ children }) {
 
-  // dark mode par défaut, mémorisé dans localStorage
   const [isDark, setIsDark] = useState(() => {
-    return localStorage.getItem('theme') !== 'light'
+    const saved = localStorage.getItem('theme')
+    const dark = saved !== 'light'
+    // applique immédiatement avant le premier rendu
+    if (dark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    return dark
   })
 
-  // langue par défaut FR, mémorisée dans localStorage
   const [lang, setLang] = useState(() => {
     return localStorage.getItem('lang') || 'fr'
   })
 
-  // applique la classe dark sur le html + sauvegarde dans localStorage
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDark)
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
-  // sauvegarde la langue dans localStorage
   useEffect(() => {
     localStorage.setItem('lang', lang)
   }, [lang])
 
   const toggleTheme = () => setIsDark(prev => !prev)
   const toggleLang  = () => setLang(prev => prev === 'fr' ? 'en' : 'fr')
-
-  // fonction de traduction — retourne le texte selon la langue active
   const t = (key) => translations[lang][key] || key
 
   return (
@@ -202,7 +165,6 @@ export function AppProvider({ children }) {
   )
 }
 
-// hook pour utiliser le contexte dans n'importe quel composant
 export function useApp() {
   return useContext(AppContext)
 }

@@ -13,19 +13,19 @@ const contacts = [
   {
     Icon: FaLinkedin,
     label: 'LinkedIn',
-    href: 'https://linkedin.com/in/',
+    href: 'https://www.linkedin.com/in/mahouton-kris-affokpon-12811937a/',
     glow: 'hover:shadow-[0_0_30px_rgba(10,102,194,0.55)] hover:text-[#0A66C2] hover:border-[#0A66C2]/40',
   },
   {
     Icon: SiGmail,
     label: 'Gmail',
-    href: 'mailto:ton-email@gmail.com',
+    href: 'mailto:affokponkris4@gmail.com',
     glow: 'hover:shadow-[0_0_30px_rgba(234,67,53,0.55)] hover:text-[#EA4335] hover:border-[#EA4335]/40',
   },
   {
     Icon: FaWhatsapp,
     label: 'WhatsApp',
-    href: 'https://wa.me/22900000000',
+    href: 'https://wa.me/22947333886',
     glow: 'hover:shadow-[0_0_30px_rgba(37,211,102,0.55)] hover:text-[#25D366] hover:border-[#25D366]/40',
   },
 ]

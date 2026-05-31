@@ -4,30 +4,30 @@ import { useApp } from '../context/AppContext'
 
 const projects = [
   {
-    title: 'TaskFlow Mobile',
-    descKey: 'projects.taskflow.desc',
-    tags: ['React Native', 'SQLite', 'Node.js'],
-    icon: Smartphone,
-    gradient: 'from-primary/30 to-secondary/20',
-    code: 'https://github.com/Krisaff7',
-    demo: '#',
-  },
-  {
-    title: 'Portfolio Engine',
-    descKey: 'projects.engine.desc',
-    tags: ['React', 'Tailwind', 'Node.js'],
+    title: 'Portfolio AMK.dev',
+    descKey: 'projects.portfolio.desc',
+    tags: ['React.js', 'Tailwind CSS', 'Framer Motion'],
     icon: Globe,
+    gradient: 'from-primary/30 to-secondary/20',
+    code: 'https://github.com/Krisaff7/amk.dev-portfolio',
+    demo: '#', // à remplacer par le lien Vercel après déploiement
+  },
+  {
+    title: 'WorkGuard',
+    descKey: 'projects.workguard.desc',
+    tags: ['React Native', 'TypeScript', 'SQLite'],
+    icon: Smartphone,
     gradient: 'from-secondary/30 to-primary/20',
-    code: 'https://github.com/Krisaff7',
+    code: 'https://github.com/Krisaff7/WorkGuard',
     demo: '#',
   },
   {
-    title: 'Campus API',
-    descKey: 'projects.campus.desc',
-    tags: ['Node.js', 'Express', 'SQL'],
+    title: 'Writapp',
+    descKey: 'projects.writapp.desc',
+    tags: ['React Native', 'TypeScript', 'SQLite'],
     icon: Database,
     gradient: 'from-primary/40 to-secondary/30',
-    code: 'https://github.com/Krisaff7',
+    code: 'https://github.com/Krisaff7/Writapp',
     demo: '#',
   },
 ]
@@ -103,7 +103,7 @@ export default function Projects() {
                   {/* boutons */}
                   <div className="flex gap-3">
                     
-                    <a href={p.code}
+                    <a   href={p.code}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center gap-2 text-sm py-2 rounded-lg border border-border hover:bg-muted transition text-foreground"
@@ -112,7 +112,7 @@ export default function Projects() {
                       {t('projects.code')}
                     </a>
                     
-                    <a  href={p.demo}
+                    <a    href={p.demo}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 inline-flex items-center justify-center gap-2 text-sm py-2 rounded-lg bg-gradient-primary text-primary-foreground hover:shadow-glow transition"
