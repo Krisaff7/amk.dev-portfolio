@@ -46,7 +46,6 @@ export default function About() {
               />
             </div>
 
-            {/* effets de lumière autour de la photo */}
             <div className="absolute -top-3 -right-3 w-16 h-16 rounded-full bg-secondary/80 blur-2xl" />
             <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-primary/40 blur-2xl" />
           </motion.div>
@@ -79,7 +78,8 @@ export default function About() {
 
             {/* bouton CV */}
             <a
-              href="#"
+              href="/Mahouton_Kris_AFFOKPON_CV.pdf"
+              target="_blank"
               download
               className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full font-medium text-foreground border border-primary/40 hover:border-primary hover:shadow-glow hover:scale-105 transition-all glass"
             >
