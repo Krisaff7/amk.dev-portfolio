@@ -34,8 +34,7 @@ function TimelineRow({ step, index, open, onToggle, t }) {
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
       className={`glass rounded-2xl p-5 w-full text-left hover:shadow-glow group relative overflow-hidden ${borderClass}`}
     >
-      {/* effet shimmer au survol */}
-      <span className="pointer-events-none absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-primary/15 to-transparent" />
+
 
       {/* année + badge en cours */}
       <div className={`flex items-center gap-2 mb-1 relative ${isLeft ? 'md:justify-end' : ''}`}>
@@ -103,7 +102,7 @@ function TimelineRow({ step, index, open, onToggle, t }) {
           step.goal
             ? 'bg-background border-2 border-dashed border-primary'
             : step.inProgress
-            ? 'bg-primary animate-pulse-ring ring-2 ring-primary/40'
+            ? 'bg-primary ring-2 ring-primary/40'
             : 'bg-gradient-primary'
         }`}
       />
@@ -151,7 +150,7 @@ export default function Timeline() {
     offset: ['start 80%', 'end 30%'],
   })
   const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1])
-  const glowY = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+
 
   return (
     <section id="timeline" className="py-24 px-6 overflow-hidden">
@@ -182,14 +181,10 @@ export default function Timeline() {
           {/* ligne animée qui se dessine au scroll */}
           <motion.div
             style={{ scaleY: lineScale, transformOrigin: 'top' }}
-            className="pointer-events-none absolute top-0 bottom-0 left-4 md:left-1/2 md:-translate-x-1/2 w-[2px] rounded-full bg-gradient-to-b from-primary via-primary to-secondary shadow-glow"
+            className="pointer-events-none absolute top-0 bottom-0 left-4 md:left-1/2 md:-translate-x-1/2 w-[2px] rounded-full bg-gradient-to-b from-primary via-primary to-secondary"
           />
 
-          {/* comète qui suit le scroll */}
-          <motion.div
-            style={{ top: glowY }}
-            className="pointer-events-none absolute left-4 md:left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-secondary blur-[3px] shadow-[0_0_20px_8px_rgba(56,189,248,0.5)]"
-          />
+
 
           {/* étapes */}
           <div className="space-y-12 pt-2">

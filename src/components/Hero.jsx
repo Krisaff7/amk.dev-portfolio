@@ -50,7 +50,7 @@ export default function Hero() {
     // section plein écran avec grille en pointillés
     <section
       id="hero"
-      className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative bg-grid-dots"
+      className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative"
     >
 
       {/* badge */}

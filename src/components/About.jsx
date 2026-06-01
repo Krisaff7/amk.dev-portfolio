@@ -45,9 +45,6 @@ export default function About() {
                 className="w-full h-full rounded-3xl object-cover"
               />
             </div>
-
-            <div className="absolute -top-3 -right-3 w-16 h-16 rounded-full bg-secondary/80 blur-2xl" />
-            <div className="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-primary/40 blur-2xl" />
           </motion.div>
 
           {/* texte */}

@@ -50,10 +50,9 @@ export default function Stats() {
                 {/* fond dégradé au hover */}
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl" />
 
-                {/* halo derrière l'icône */}
+                {/* icône */}
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-primary blur-xl opacity-30 group-hover:opacity-60 transition-opacity duration-500 rounded-full scale-150" />
-                  <div className="relative w-14 h-14 rounded-2xl glass flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                  <div className="relative w-14 h-14 rounded-2xl glass flex items-center justify-center transition-all duration-300">
                     <Icon size={26} className={stat.color} />
                   </div>
                 </div>

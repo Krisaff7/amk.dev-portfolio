@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Code2, Eye, Smartphone, Globe, Database } from 'lucide-react'
+import { Code2, Eye } from 'lucide-react'
 import { useApp } from '../context/AppContext'
 
 const projects = [
@@ -7,7 +7,7 @@ const projects = [
     title: 'Portfolio AMK.dev',
     descKey: 'projects.portfolio.desc',
     tags: ['React.js', 'Tailwind CSS', 'Framer Motion'],
-    icon: Globe,
+    image: '/portfolio.png',
     gradient: 'from-primary/30 to-secondary/20',
     code: 'https://github.com/Krisaff7/amk.dev-portfolio',
     demo: '#', // à remplacer par le lien Vercel après déploiement
@@ -16,19 +16,17 @@ const projects = [
     title: 'WorkGuard',
     descKey: 'projects.workguard.desc',
     tags: ['React Native', 'TypeScript', 'SQLite'],
-    icon: Smartphone,
+    image: '/workguard.jpeg',
     gradient: 'from-secondary/30 to-primary/20',
     code: 'https://github.com/Krisaff7/WorkGuard',
-    demo: '#',
   },
   {
     title: 'Writapp',
     descKey: 'projects.writapp.desc',
     tags: ['React Native', 'TypeScript', 'SQLite'],
-    icon: Database,
+    image: '/writapp.jpeg',
     gradient: 'from-primary/40 to-secondary/30',
     code: 'https://github.com/Krisaff7/Writapp',
-    demo: '#',
   },
 ]
 
@@ -59,7 +57,6 @@ export default function Projects() {
         {/* grille de projets */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((p, i) => {
-            const Icon = p.icon
             return (
               <motion.article
                 key={p.title}
@@ -69,10 +66,11 @@ export default function Projects() {
                 transition={{ duration: 0.5, delay: i * 0.1 }}
                 className="glass rounded-2xl overflow-hidden group hover:shadow-glow transition-all duration-500 hover:-translate-y-2 flex flex-col"
               >
-                {/* image placeholder avec icône */}
+                {/* image */}
                 <div className={`aspect-[16/10] bg-gradient-to-br ${p.gradient} flex items-center justify-center relative overflow-hidden`}>
-                  <Icon className="w-16 h-16 text-foreground/80 group-hover:scale-110 transition-transform duration-500" />
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,oklch(0.70_0.18_295/0.25),transparent_70%)]" />
+                  {p.image ? (
+                    <img src={p.image} alt={p.title} className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500" />
+                  ) : null}
                 </div>
 
                 {/* contenu */}
@@ -112,14 +110,16 @@ export default function Projects() {
                       {t('projects.code')}
                     </a>
                     
-                    <a    href={p.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex-1 inline-flex items-center justify-center gap-2 text-sm py-2 rounded-lg bg-gradient-primary text-primary-foreground hover:shadow-glow transition"
-                    >
-                      <Eye className="w-4 h-4" />
-                      {t('projects.view')}
-                    </a>
+                    {p.demo && (
+                      <a    href={p.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 inline-flex items-center justify-center gap-2 text-sm py-2 rounded-lg bg-gradient-primary text-primary-foreground hover:shadow-glow transition"
+                      >
+                        <Eye className="w-4 h-4" />
+                        {t('projects.view')}
+                      </a>
+                    )}
                   </div>
 
                 </div>

@@ -62,17 +62,10 @@ function SkillRow({ name, icon, level, index }) {
       <div className="flex items-center justify-between mb-2">
         <div className="flex items-center gap-3">
 
-          {/* icône avec halo violet au survol */}
-          <motion.div
-            animate={hovered
-              ? { boxShadow: '0 0 14px 4px oklch(0.70 0.18 295 / 0.55)', scale: 1.18 }
-              : { boxShadow: '0 0 0px 0px oklch(0.70 0.18 295 / 0)',      scale: 1    }
-            }
-            transition={{ duration: 0.25 }}
-            className="rounded-full p-0.5 flex items-center justify-center"
-          >
+          {/* icône */}
+          <div className="rounded-full p-0.5 flex items-center justify-center">
             <img src={icon} alt={name} width={22} height={22} loading="lazy" className="w-5 h-5" />
-          </motion.div>
+          </div>
 
           <span className="font-medium text-sm text-foreground">{name}</span>
         </div>
@@ -93,13 +86,7 @@ function SkillRow({ name, icon, level, index }) {
           transition={{ duration: 1.1, delay: 0.15 + index * 0.06, ease: 'easeOut' }}
           className="h-full bg-gradient-primary rounded-full relative overflow-hidden"
         >
-          {/* shimmer qui balaye */}
-          <motion.span
-            initial={{ x: '-100%' }}
-            animate={inView ? { x: '200%' } : {}}
-            transition={{ duration: 1.0, delay: 0.5 + index * 0.06, ease: 'easeInOut' }}
-            className="absolute inset-0 w-1/2 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-20deg]"
-          />
+
         </motion.div>
       </div>
     </motion.div>
@@ -117,13 +104,11 @@ function SkillGroup({ title, icon: Icon, items, delay }) {
       whileHover={{ y: -6, transition: { duration: 0.3 } }}
       className="glass rounded-2xl p-7 relative overflow-hidden group"
     >
-      {/* reflet lumineux en fond au hover */}
-      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-           style={{ background: 'radial-gradient(circle at 50% 0%, oklch(0.70 0.18 295 / 0.08), transparent 70%)' }} />
+
 
       {/* en-tête avec icône gradient */}
       <h3 className="text-xl font-semibold mb-6 flex items-center gap-3">
-        <span className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center shadow-glow flex-shrink-0">
+        <span className="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
           <Icon className="w-4 h-4 text-white" />
         </span>
         <span>{title}</span>
@@ -144,25 +129,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6 relative overflow-hidden">
 
-      {/* blobs lumineux flottants en arrière-plan */}
-      <motion.div
-        animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
-        transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute -top-20 -left-20 w-80 h-80 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, oklch(0.70 0.18 295 / 0.12), transparent 70%)' }}
-      />
-      <motion.div
-        animate={{ y: [0, 25, 0], x: [0, -15, 0] }}
-        transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-        className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, oklch(0.78 0.13 235 / 0.10), transparent 70%)' }}
-      />
-      <motion.div
-        animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
-        transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut', delay: 4 }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(circle, oklch(0.70 0.18 295 / 0.06), transparent 70%)' }}
-      />
+
 
       <div className="max-w-6xl mx-auto relative z-10">
 
