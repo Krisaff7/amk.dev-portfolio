@@ -1,0 +1,13 @@
+<svg width="100%" viewBox="0 0 680 680" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>AMK logo favicon</title>
+  <desc>Logo hexagone avec les lettres AMK</desc>
+
+  <!-- Fond sombre carré arrondi aux couleurs du thème -->
+  <rect x="90" y="90" width="500" height="500" rx="80" fill="#233350" />
+
+  <!-- Hexagone central avec la couleur secondaire -->
+  <polygon points="340,145 490,228 490,395 340,478 190,395 190,228" fill="none" stroke="#7ca5b8" stroke-width="24" stroke-linejoin="round" />
+
+  <!-- Texte AMK centré -->
+  <text x="340" y="345" text-anchor="middle" dominant-baseline="middle" font-family="'Poppins', 'Arial Black', 'Arial', sans-serif" font-size="130" font-weight="700" fill="#f6f9fd" letter-spacing="-2">AMK</text>
+</svg>

@@ -10,7 +10,7 @@ const projects = [
     image: '/portfolio.png',
     gradient: 'from-primary/30 to-secondary/20',
     code: 'https://github.com/Krisaff7/amk.dev-portfolio',
-    demo: '#', // à remplacer par le lien Vercel après déploiement
+    demo: 'https://amk-dev-portfolio.vercel.app',
   },
   {
     title: 'WorkGuard',

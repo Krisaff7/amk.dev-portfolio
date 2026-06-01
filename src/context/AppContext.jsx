@@ -9,7 +9,7 @@ const translations = {
     'nav.projects':    'Projets',
     'nav.stats':       'Stats',
     'nav.contact':     'Contact',
-    'hero.badge':      'PORTFOLIO · 2025',
+    'hero.badge':      'PORTFOLIO · 2026',
     'hero.phrase1':    'Développeur Web Fullstack Junior',
     'hero.phrase2':    'Développeur Mobile React Native',
     'hero.phrase3':    'Étudiant en Génie Logiciel',
@@ -56,10 +56,10 @@ const translations = {
     'stats.years':     'Années de formation',
     'stats.available': 'Disponible freelance',
     'contact.badge':    'CONTACT',
-    'contact.title1':   'Contacte-',
+    'contact.title1':   'Contactez-',
     'contact.title2':   'moi',
-    'contact.subtitle': "Tu as un projet, une question ou une opportunité ? N'hésite pas.",
-    'footer.rights': '© 2025 AFFOKPON Mahouton Kris — Tous droits réservés',
+    'contact.subtitle': "Vous avez un projet, une question ou une opportunité ? N'hésitez pas.",
+    'footer.rights': '© 2026 AFFOKPON Mahouton Kris — Tous droits réservés',
 
   },
 
