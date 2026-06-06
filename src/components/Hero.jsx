@@ -53,11 +53,6 @@ export default function Hero() {
       className="min-h-screen flex flex-col items-center justify-center text-center px-6 relative"
     >
 
-      {/* badge */}
-      <p className="text-sm uppercase tracking-[0.3em] text-primary mb-4">
-        {t('hero.badge')}
-      </p>
-
       {/* nom */}
       <h1 className="text-5xl md:text-7xl font-black mb-2 tracking-tight text-foreground">
         AFFOKPON
